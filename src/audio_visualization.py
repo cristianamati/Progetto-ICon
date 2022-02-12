@@ -64,7 +64,6 @@ if __name__ == '__main__':
     print("Example of input--->namefile.wav")
     path = input()
     
-    #path = 'C:/Users/crist/Desktop/Data/genres_original/blues/blues.00000.wav'
     audio = plot_sound(path, 22050)
 
     # Waveplot
