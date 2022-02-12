@@ -12,7 +12,7 @@ Lo scopo dell'apprendimento è quello della classificazione del genere musicale 
 
 ## Il Dataset
 Il dataset utilizzato è il GTZAN dataset, il più famoso dataset usato per applicazione di apprendimento musicale.
-Esso contiene 1000 tracce della durata di 30 secondi ognuna divise per generi musicali.
+Esso contiene 1000 tracce della durata di 30 secondi ognuna divise per generi musicali (in totale 10 generi).
 Le tracce sono tutte in formato .wav, dunque senza perdita di qualità.
 Allegato al dataset troviamo anche una rappresentazione visuale per ogni traccia in formato .png.
 
@@ -44,7 +44,7 @@ utilizzano quindi il set completo.
 - Regressione logistica: Nella fase di addestramento l'algoritmo di regressione logistica prende in input n esempi da un insieme di training. Durante l'addestramento l'algoritmo elabora una distribuzione di pesi che permetta di classificare correttamente gli esempi con le classi corrette. Poi calcola la combinazione lineare z del vettore dei pesi W e degli attributi. La combinazione lineare z viene passata alla funzione logistica (sigmoid) che calcola la probabilità di appartenenza del campione alle classi del modello.
 
 
-## •	Processo di sviluppo
+## 	Processo di sviluppo
 1)  Effettuo il preprocessing sul training set (encoding dell'attributo target in valori numerici, separazione di attributi dall'attributo target, trasformazione delle features in range [0,1])
 
 2)	Divisione del dataset in 2 parti, una parte (Training-set) usata per addestrare i classificatori e la l'altra utilizzata per testare questi ultimi e le loro performance (Test-set).
@@ -54,7 +54,8 @@ utilizzano quindi il set completo.
 Si è scelto di lavorare sul file "features_3_sec.csv".
 L'algoritmo che si è dimostrato più performante durante i test è stato il K-Nearest-Neighbor.
 
-      ![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/report.jpg)
+
+![Esempio](report.png)
 
 ## 	Altre funzioni
 Il programma audio_visual.py permette di caricare una traccia audio in formato .wav e successivamente di visualizzarne alcuni aspetti tecnici sotto forma di grafico (waveplot, spettrogramma, MFCCs).
@@ -63,6 +64,6 @@ Permette inoltre una visualizzazione completa delle colonne del dataset e la pos
 ## 	Librerie utilizzate
 Per questo sistema sono state utilizzate alcune librerie tipiche delle applicazioni di ML in python:
 - sklearn (https://scikit-learn.org/stable/) che permette la definizione e gestione di classificatori e metriche
-- pandas per la gestione dei trainingset, strutture dati e operazioni su essere
-- librosa, per le operazioni di visualizzazione e manipolazione dei file audio
-- numpy, per le numerose funzioni matematiche predisponibili
+- pandas (https://pandas.pydata.org/) per la gestione dei trainingset, strutture dati e operazioni su essere
+- librosa (https://librosa.org/doc/latest/index.html) , per le operazioni di visualizzazione e manipolazione dei file audio
+- numpy (https://numpy.org/), per le numerose funzioni matematiche predisponibili
