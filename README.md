@@ -55,7 +55,7 @@ Si è scelto di lavorare sul file "features_3_sec.csv".
 L'algoritmo che si è dimostrato più performante durante i test è stato il K-Nearest-Neighbor.
 
 
-![Esempio](report.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/report.jpg)
 
 ## 	Altre funzioni
 Il programma audio_visual.py permette di caricare una traccia audio in formato .wav e successivamente di visualizzarne alcuni aspetti tecnici sotto forma di grafico (waveplot, spettrogramma, MFCCs).
