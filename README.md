@@ -50,7 +50,7 @@ utilizzano quindi il set completo.
 
 3)	Valutazione delle performance dei classificatori tramite il calcolo dell'accuratezza di ciascuna predizione e il confronto di questa con il rispettivo valore reale.
 
-      ![Esempio di grafico](https://github.com/DaniMe98/ICon-progetto/blob/master/Cattura.PNG)
+      ![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/report.jpg)
 
 ## 	Altre funzioni
 Il programma audio_visual.py permette di caricare una traccia audio in formato .wav e successivamente di visualizzrne alcuni aspetti tecnici sotto forma di grafico (waveplot, spettrogramma, MFCCs).
