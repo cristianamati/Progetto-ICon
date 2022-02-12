@@ -7,7 +7,7 @@ Matricola: 707126
 E-mail: c.amati9@studenti.uniba.it
 
 ## 	Introduzione
-Il sistema progettato consiste nell'applicazione di sette classificatori ad un dataset musicale (GTZAN dataset) per addestrarli e testarli su esempi del dataset non considerati nell'addeestramento, effettuando un apprendimento supervisionato.
+Il sistema progettato consiste nell'applicazione di una serie di classificatori ad un dataset musicale (GTZAN dataset) per addestrarli e testarli su esempi non considerati durante il train, effettuando un apprendimento supervisionato.
 Lo scopo dell'apprendimento è quello della classificazione del genere musicale di appartenenza per tracce musicali dati alcuni parametri tecnici estratti dalle tracce stesse.
 
 ## Il Dataset
@@ -43,6 +43,7 @@ utilizzano quindi il set completo.
 
 - Regressione logistica: Nella fase di addestramento l'algoritmo di regressione logistica prende in input n esempi da un insieme di training. Durante l'addestramento l'algoritmo elabora una distribuzione di pesi che permetta di classificare correttamente gli esempi con le classi corrette. Poi calcola la combinazione lineare z del vettore dei pesi W e degli attributi. La combinazione lineare z viene passata alla funzione logistica (sigmoid) che calcola la probabilità di appartenenza del campione alle classi del modello.
 
+
 ## •	Processo di sviluppo
 1)  Effettuo il preprocessing sul training set (encoding dell'attributo target in valori numerici, separazione di attributi dall'attributo target, trasformazione delle features in range [0,1])
 
@@ -50,11 +51,14 @@ utilizzano quindi il set completo.
 
 3)	Valutazione delle performance dei classificatori tramite il calcolo dell'accuratezza di ciascuna predizione e il confronto di questa con il rispettivo valore reale.
 
+Si è scelto di lavorare sul file "features_3_sec.csv".
+L'algoritmo che si è dimostrato più performante durante i test è stato il K-Nearest-Neighbor.
+
       ![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/report.jpg)
 
 ## 	Altre funzioni
-Il programma audio_visual.py permette di caricare una traccia audio in formato .wav e successivamente di visualizzrne alcuni aspetti tecnici sotto forma di grafico (waveplot, spettrogramma, MFCCs).
-Permette inoltre una visualizzazione completa delle colonne del dataset e la possibilità di creare la mappa di correlazione tra esse.
+Il programma audio_visual.py permette di caricare una traccia audio in formato .wav e successivamente di visualizzarne alcuni aspetti tecnici sotto forma di grafico (waveplot, spettrogramma, MFCCs).
+Permette inoltre una visualizzazione completa delle colonne del dataset e la possibilità di creare e mostrare una mappa di correlazione tra esse.
 
 ## 	Librerie utilizzate
 Per questo sistema sono state utilizzate alcune librerie tipiche delle applicazioni di ML in python:
