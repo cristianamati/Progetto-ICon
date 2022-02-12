@@ -55,7 +55,6 @@ if __name__ == '__main__':
     print(df.head())
 
     genres = genre_dict(df['label'].tolist())
-    # print(genres)
 
     # Data Preprocessing
 
