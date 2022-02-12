@@ -5,20 +5,20 @@ import seaborn as sns
 import numpy as np
 from matplotlib import pyplot as plt
 
-
+# Funzione per il caricamento del file audio
 def plot_sound(path, sr):
     x, sr = librosa.load(path, sr)
     print("Audio length--> {}, sample rate--> {}".format(x.shape, sr))
     return x
 
-
+# Funzione per la stampa della waveplot
 def waveplot(audio):
     librosa.display.waveplot(audio, sr=22050)
     plt.xlabel("Time")
     plt.ylabel("Amplitude")
     plt.show()
 
-
+# Funzione per la stampa dello spettrogramma
 def spectrogram(audio):
     X = librosa.stft(audio)
     Xdb = librosa.amplitude_to_db(abs(X))
@@ -28,7 +28,7 @@ def spectrogram(audio):
     plt.colorbar()
     plt.show()
 
-
+# Funzione per la stampa delle features MFCCs
 def mfccs(audio):
     mfccs = librosa.feature.mfcc(audio, n_mfcc=20)
     librosa.display.specshow(mfccs, sr=22050)
