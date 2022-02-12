@@ -11,6 +11,8 @@ Il sistema progettato consiste nell'applicazione di una serie di classificatori 
 Lo scopo dell'apprendimento è quello della classificazione del genere musicale di appartenenza per tracce musicali dati alcuni parametri tecnici estratti dalle tracce stesse.
 
 ## Il Dataset
+Link al dowanload del dataset completo (1 GB circa)[https://www.kaggle.com/andradaolteanu/gtzan-dataset-music-genre-classification/download]
+
 Il dataset utilizzato è il GTZAN dataset, il più famoso dataset usato per applicazione di apprendimento musicale.
 Esso contiene 1000 tracce della durata di 30 secondi ognuna divise per generi musicali (in totale 10 generi).
 Le tracce sono tutte in formato .wav, dunque senza perdita di qualità.
