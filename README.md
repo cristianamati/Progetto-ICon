@@ -23,7 +23,7 @@ Gli attributi corporei di ciascun pinguino sono:
 - Lunghezza della pinna (in mm)
 - Massa (in kg)
 
-![Esempio](body.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/body.png)
 
 Il dataset presenza alcuni valori mancanti (NaN) che verrano trattati opportunamente durante l'analisi dei dati nell'algoritmo
 
@@ -33,7 +33,7 @@ Il dataset presenza alcuni valori mancanti (NaN) che verrano trattati opportunam
 ## 	Operazioni sul dataset
 Per prima cosa dopo aver visualizzato il dataset si procede a verificare la presenza di dati nulli o assenti.
 
-![Esempio](null.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/null.png)
 
 Per gestire questi dati si può procedere in diversi modi:
 
@@ -49,11 +49,11 @@ Infine circa 10 pinguini pur avendo i dati corporei completi non hanno un sesso 
 Dato che per l'apprendimento è necessario trasformare le colonne con valori testuali in numerici si è scelto di eliminare la colona ralativa al sesso e sostituirla con due colonne 'MALE' e 'FEMALE' con valori binari a seconda che il pinguino sia maschio o femmina.
 I pinguini senza sesso assegnato avranno 0 come valore in entrambe le nuove colonne
 
-![Esempio](sex.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/sex.png)
 
 Infine si è ripetuto lo stesso processo per le isole di provenienza ottenendo cosi il database finale sul quale trainare i modelli
 
-![Esempio](final.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/final.png)
 
 Questo dataset è salvato in formato .csv nella stessa directory dello script Pyhton.
 
@@ -67,16 +67,16 @@ Iniziando ad analizzare i dati del dataset, grazie agli strumenti della libreria
 Alcuni dati preliminari di facile interpretazione come il numero di pinguini per specie.
 
 
-![Esempio](count.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/count.png)
 
 
 O la loro ripartizione per isola.
 
-![Esempio](island.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/island.png)
 
 Più interessante è il grafico che mostra la correlazione tra le gli attributi fisici dei pinguini
 
-![Esempio](pairplot.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/pairplot.png)
 
 Alcune osservazioni:
 - La massa coporea non sembra essere una buona variante sulla quale classificare i pinguini
@@ -87,13 +87,13 @@ Alcune osservazioni:
 
 Per verificare le dipendenze tra le caratteristiche è utile calcolare la covarianza tra esse
 
-![Esempio](cov.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/cov.png)
 
 Si nota che la lunghezza del becco, della pinna e la massa variano nella stessa direzione, solo la profondità del becco in direzione opposta
 
 Quanto forti sono queste relazioni è verificabile tramite una apposita matrice
 
-![Esempio](matrix.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/matrix.png)
 
 Si vede ovviamente una forte correlazione tra la massa e la lunghezza della pinna, più sarà pesante il pinguino più la pinna dovrebbe essere lunga
 
@@ -108,18 +108,18 @@ Per la costruzione di un modello di apprendimento supervisionato il dataset vien
 - Albero di Decisione, modello predittivo dove ogni nodo interno rappresenta una variabile, un arco verso un nodo figlio rappresenta un possibile valore per quella proprietà e una foglia il valore predetto per la variabile obiettivo a partire dai valori delle altre proprietà. Partendo dalla radice, ogni condizione incontrata viene valutata e si segue l'arco corrispondente al risultato raggiunta una foglia si assegna la classe corrispondente
 
 Questi i risultati per il modello basato sull'albero di decisione
-![Esempio](tree.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/tree.png)
 
 E' stato poi calcolato il numero ottimale di neighbor per l'algoritmo K-Nearest-Neighbor
 Con k=2 si sono ottenuti questi risultati:
 
-![Esempio](knn.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/knn.png)
 
 Come è possibile notare anche dai grafici della curva ROC il primo modello è sostanzialmente migliore del secondo.
 (Curve più vicine al valore 1 sulle ascisse indicano modelli migliori)
 
-![Esempio](roc1.png)
-![Esempio](roc2.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/roc1.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/roc2.png)
 
 Infine è possibile eseguendo lo script predire la classe target, ovvero la specie, di un nuovo pinguino basandosi sul primo modello previo inserimento delle caratteristiche fisiche dell'esemplare.
 
@@ -139,7 +139,7 @@ E’ possibile verificare il numero ottimale di K tramite il metodo del gomito.
 
 Si itera il K-means per diversi valori di K ed ogni volta si calcola la somma delle distanze al quadrato tra ogni centroide ed i punti del proprio cluster.
 
-![Esempio](elbow.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/elbow.png)
 
 Si nota dal grafico che il numero di K ottimale sarebbe 3 o 2.
 Nel nostro caso scegliamo di procedere con K=3.
@@ -147,7 +147,7 @@ Nel nostro caso scegliamo di procedere con K=3.
 Viene poi trainato un modello per ogni coppia di proprietà di un pinguino al fine di trovare la combinazione migliore.
 A tal proposito è utile notare la distribuzione tramite il grafico
 
-![Esempio](kmeans.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/kmeans.png)
 
 Clusterizzare secondo la profondità del becco e la lunghezza della pinna restituisca 3 cluster ben definiti con uno dei 3 molto distaccato dagli altri 2.
 Anche clusterizzare secondo la lunghezza del becco e quella della pinna dia tutto sommato buoni risultati
@@ -155,7 +155,7 @@ Anche clusterizzare secondo la lunghezza del becco e quella della pinna dia tutt
 Infine per ogni clusterizzazione viene calcolato il numero di esempi classificati in ognuno dei 3 cluster.
 
 Esempio con clusterizzazione secondo lunghezza della pinna e profondità becco
-![Esempio](k_ex.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/k_ex.png)
 
 Si nota come questa clusterizzazione distingue molto bene praticamente tutti i pinguini 'Gentoo' mentre ha risultati minori con le altre due specie, che ricordiamo avere maggiori caratteristiche in comune tra loro.
 
