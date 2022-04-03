@@ -15,7 +15,7 @@ Il sistema progettato consiste nella creazione di un modello di apprendimento su
 Il dataset utilizzato è il Palmer Penguins dataset, un database di dati raccolti dal  Dr. Kristen Gorman e la Palmer Station (Antartide).
 Esso contiene 343 voci per altrettanti pinguini, suddivisi per sesso, specie e isola di provenienza con annessi dati corporei raccolti dalle rilevazioni.
 
-![Esempio](dataset.png)
+![Esempio](https://github.com/cristianamati/Progetto-ICon/blob/main/screens/dataset.png)
 
 Gli attributi corporei di ciascun pinguino sono:
 - Lunghezza del becco (in mm)
